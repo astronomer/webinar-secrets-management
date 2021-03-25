@@ -16,3 +16,8 @@ ENV AIRFLOW__SECRETS__BACKEND_KWARGS='{"connections_path": "airflow/connections"
 ## https://airflow.apache.org/docs/apache-airflow-providers-microsoft-azure/stable/secrets-backends/azure-key-vault.html
 # ENV AIRFLOW__SECRETS__BACKEND="airflow.providers.microsoft.azure.secrets.azure_key_vault.AzureKeyVaultBackend"
 # ENV AIRFLOW__SECRETS__BACKEND_KWARGS='{"connections_prefix": "airflow-connections", "variables_prefix": null, "vault_url": "https://example-akv-resource-name.vault.azure.net/"}'
+
+
+## GCP Secret Manager
+# ENV AIRFLOW__SECRETS__BACKEND="airflow.providers.google.cloud.secrets.secret_manager.CloudSecretManagerBackend"
+# ENV AIRFLOW__SECRETS__BACKEND_KWARGS='{"connections_prefix": "airflow-connections", "variables_prefix": "airflow-variables", "gcp_keyfile_dict": $GCP_SECRET_MANAGER_SA_KEY}'
